@@ -1,0 +1,192 @@
+/* ===== BASE ===== */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fdfaf6;
+    margin: 0;
+}
+
+/* ===== NAVBAR ===== */
+nav {
+    animation: slideDown 1s ease;
+}
+
+nav a {
+    font-weight: 500;
+}
+
+/* ===== LOGO ===== */
+.logo {
+    height: 55px;
+    margin-top: 5px;
+}
+
+/* ===== HERO ===== */
+.hero {
+    background: linear-gradient(rgba(62,39,35,0.7), rgba(62,39,35,0.7)),
+                url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 120px 20px;
+    text-align: center;
+    animation: fadeIn 1.5s ease;
+}
+
+.hero h1 {
+    font-weight: 700;
+}
+
+/* ===== TEXTOS ===== */
+h2, h3, h4 {
+    color: hsl(0, 5%, 4%);
+    font-weight: 700;
+}
+
+p {
+    color: #5d4037;
+}
+
+/* ===== TARJETAS PRODUCTOS ===== */
+.card {
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.4s;
+}
+
+.card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+/* ===== BOTONES ===== */
+.btn, .btn-large {
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.btn:hover, .btn-large:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* ===== SOBRE NOSOTROS ===== */
+.sobre {
+    background-color: #efebe9;
+    padding: 60px 20px;
+}
+
+/* ===== FORMULARIOS (LOGIN / REGISTRO) ===== */
+.card form {
+    margin-top: 20px;
+}
+
+.input-field input:focus {
+    border-bottom: 2px solid #6d4c41 !important;
+    box-shadow: none !important;
+}
+
+.input-field label {
+    color: #6d4c41 !important;
+}
+
+/* ===== CARRITO ===== */
+#lista {
+    list-style: none;
+    padding: 0;
+}
+
+#lista li {
+    background: #efebe9;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 8px;
+    animation: fadeUp 0.5s ease;
+}
+
+#total {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #4e342e;
+}
+
+/* ===== CONTADOR CARRITO ===== */
+#contador {
+    background: #ff7043;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+}
+
+/* ===== WHATSAPP ===== */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    animation: bounce 2s infinite;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    animation: fadeIn 2s ease;
+}
+
+/* ===== SCROLL ANIM ===== */
+.scroll-anim {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.scroll-anim.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== ANIMACIONES ===== */
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+    .hero {
+        padding: 80px 10px;
+    }
+
+    .card img {
+        height: 150px;
+    }
+}
