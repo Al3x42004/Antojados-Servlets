@@ -1,5 +1,5 @@
-CREATE DATABASE IF NOT EXISTS antojados;
-USE antojados;
+CREATE DATABASE IF NOT EXISTS antojados_db;
+USE antojados_db;
 
 DROP TABLE IF EXISTS usuarios;
 
